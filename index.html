@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -91,6 +91,15 @@
       text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
     }
 
+    .nav-center a:focus-visible,
+    .dropbtn:focus-visible,
+    .hamburger:focus-visible,
+    .boink-btn:focus-visible,
+    .cta-button:focus-visible {
+      outline: 2px solid #ffd700;
+      outline-offset: 4px;
+    }
+
     /* Dropdown */
     .dropdown {
       position: relative;
@@ -136,7 +145,8 @@
       display: block;
     }
 
-    .dropdown-content a {
+    .dropdown-content a,
+    .dropdown-content span {
       color: #f5e8c7;
       padding: 12px 24px;
       display: block;
@@ -149,6 +159,11 @@
       padding-left: 32px;
     }
 
+    .dropdown-content span {
+      color: rgba(245, 232, 199, 0.42);
+      cursor: default;
+    }
+
     /* Right Side Buttons */
     .nav-right {
       display: flex;
@@ -159,7 +174,7 @@
 
     /* Boink Button */
     .boink-btn {
-      background: #1c1405;
+      background: #08090d;
       border: 2px solid #d4af37;
       border-radius: 50%;
       width: 48px;
@@ -171,6 +186,16 @@
       cursor: pointer;
       transition: all 0.25s;
       flex-shrink: 0;
+      overflow: hidden;
+      padding: 5px;
+    }
+
+    .boink-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
     }
 
     .boink-btn:hover {
@@ -241,7 +266,8 @@
     }
 
     .mobile-menu .team-header,
-    .mobile-menu a {
+    .mobile-menu a,
+    .mobile-menu span {
       font-size: 1.05rem;
       color: #f5e8c7;
       padding: 18px 28px;
@@ -250,6 +276,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .mobile-menu span {
+      color: rgba(245, 232, 199, 0.42);
+      cursor: default;
     }
 
     .mobile-submenu {
@@ -262,7 +293,8 @@
       display: flex;
     }
 
-    .mobile-submenu a {
+    .mobile-submenu a,
+    .mobile-submenu span {
       padding-left: 60px;
       font-size: 1rem;
     }
@@ -274,7 +306,9 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      background: radial-gradient(circle at center, #3a2a00 0%, #0f0a00 70%);
+      background:
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.18) 0%, transparent 34rem),
+        linear-gradient(180deg, #160f02 0%, #0f0a00 72%);
       overflow: hidden;
     }
 
@@ -295,10 +329,14 @@
     }
 
     .main-logo {
-      width: 420px;
+      width: 340px;
       max-width: 85vw;
-      filter: drop-shadow(0 0 60px rgba(212, 175, 55, 0.8));
-      margin-bottom: 30px;
+      background: rgba(15, 10, 0, 0.46);
+      border: 1px solid rgba(212, 175, 55, 0.36);
+      border-radius: 50%;
+      padding: 22px;
+      filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.42)) drop-shadow(0 0 24px rgba(212, 175, 55, 0.34));
+      margin-bottom: 28px;
     }
 
     .hero h1 {
@@ -329,12 +367,18 @@
       transition: all 0.3s;
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
     }
 
-    .cta-button:hover {
+    .cta-button:hover,
+    .cta-button:focus-visible {
       transform: scale(1.08);
       background: #ffd700;
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.22), 0 0 30px rgba(212, 175, 55, 0.7);
     }
 
     /* Footer */
@@ -371,7 +415,8 @@
       }
 
       .main-logo {
-        width: 320px;
+        width: 260px;
+        padding: 16px;
       }
     }
 
@@ -390,7 +435,7 @@
 <body>
 
   <nav>
-    <a href="#" class="nav-logo">
+    <a href="./index.html" class="nav-logo">
       <div class="logo-icon">
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 2C11 2 4 5.2 4 11.8C4 16.8 7.2 19.6 11 20C14.8 19.6 18 16.8 18 11.8C18 5.2 11 2 11 2Z"
@@ -407,24 +452,26 @@
       <div class="dropdown">
         <button class="dropbtn">Team</button>
         <div class="dropdown-content">
-          <a href="#">Chad</a>
-          <a href="#">Andre</a>
-          <a href="#">Domonic</a>
-          <a href="#">Alexa</a>
-          <a href="#">Zahid</a>
-          <a href="#">Matthew</a>
+          <a href="./Team/Chad.html#chad">Chad</a>
+          <a href="./Team/Chad.html#andre">Andre</a>
+          <a href="./Team/Chad.html#dominick">Dominick</a>
+          <a href="./Team/Chad.html#alexa">Alexa</a>
+          <a href="./Team/Chad.html#zahid">Zahid</a>
+          <a href="./Team/Chad.html#matthew">Matthew</a>
         </div>
       </div>
-      <a href="#">Documentation</a>
-      <a href="#">Sponsors</a>
-      <a href="#">Robot</a>
+      <a href="./Documentation/documentation.html">Documentation</a>
+      <a href="./Sponsors/Sponsors.html">Sponsors</a>
+      <a href="./Robot/Robot.html">Robot</a>
     </div>
 
     <div class="nav-right">
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
-      <button class="boink-btn" id="boinkBtn" aria-label="Happy button">🏹</button>
+      <button class="boink-btn" id="boinkBtn" aria-label="Sound button">
+        <img src="./Website_Resources/ucf-bow-arrow.svg" alt="">
+      </button>
     </div>
   </nav>
 
@@ -434,7 +481,7 @@
       <img src="./Website_Resources/Centauroid_Logo.png" alt="Chiron Robotics" class="main-logo" id="chironLogo">
       <h1>CHIRON ROBOTICS</h1>
       <p>Precision Engineering • Ancient Wisdom • Modern Competition</p>
-      <button class="cta-button">Explore the Build</button>
+      <a class="cta-button" href="./Robot/Robot.html">Explore the Build</a>
     </div>
   </section>
 
@@ -443,16 +490,16 @@
       Team <span id="teamArrow">▼</span>
     </div>
     <div class="mobile-submenu" id="mobileSubmenu">
-      <a href="#">Chad</a>
-      <a href="#">Andre</a>
-      <a href="#">Domonic</a>
-      <a href="#">Alexa</a>
-      <a href="#">Zahid</a>
-      <a href="#">Matthew</a>
+      <a href="./Team/Chad.html#chad">Chad</a>
+      <a href="./Team/Chad.html#andre">Andre</a>
+      <a href="./Team/Chad.html#dominick">Dominick</a>
+      <a href="./Team/Chad.html#alexa">Alexa</a>
+      <a href="./Team/Chad.html#zahid">Zahid</a>
+      <a href="./Team/Chad.html#matthew">Matthew</a>
     </div>
-    <a href="#">Documentation</a>
-    <a href="#">Sponsors</a>
-    <a href="#">Robot</a>
+    <a href="./Documentation/documentation.html">Documentation</a>
+    <a href="./Sponsors/Sponsors.html">Sponsors</a>
+    <a href="./Robot/Robot.html">Robot</a>
   </div>
 
   <footer>
@@ -463,20 +510,38 @@
     // Boink Sound + Animation
     const boinkBtn = document.getElementById('boinkBtn');
 
+    const soundCycle = [
+      { type: 'sine', notes: [392, 523.25, 659.25], duration: 0.24, volume: 0.1 },
+      { type: 'triangle', notes: [440, 554.37, 739.99], duration: 0.22, volume: 0.085 },
+      { type: 'sine', notes: [523.25, 659.25, 783.99], duration: 0.26, volume: 0.085 },
+      { type: 'triangle', notes: [329.63, 392, 493.88], duration: 0.25, volume: 0.08 }
+    ];
+    let soundIndex = 0;
+
     function playBoink() {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
       const now = ctx.currentTime;
+      const preset = soundCycle[soundIndex % soundCycle.length];
+      soundIndex += 1;
+      const step = preset.duration / preset.notes.length;
 
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
       osc.connect(gain); gain.connect(ctx.destination);
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(680, now);
-      osc.frequency.exponentialRampToValueAtTime(180, now + 0.35);
-      gain.gain.setValueAtTime(0.4, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+      osc.type = preset.type;
+      preset.notes.forEach((note, index) => {
+        const at = now + index * step;
+        if (index === 0) {
+          osc.frequency.setValueAtTime(note, at);
+        } else {
+          osc.frequency.exponentialRampToValueAtTime(note, at);
+        }
+      });
+      gain.gain.setValueAtTime(0.001, now);
+      gain.gain.exponentialRampToValueAtTime(preset.volume, now + 0.018);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + preset.duration);
       osc.start(now);
-      osc.stop(now + 0.4);
+      osc.stop(now + preset.duration + 0.03);
     }
 
     boinkBtn.addEventListener('click', () => {
