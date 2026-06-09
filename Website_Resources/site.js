@@ -88,3 +88,27 @@ if (hamburger && mobileMenu) {
     });
   });
 }
+
+document.querySelectorAll(".footer-share").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const shareData = {
+      title: "CHIRON Robotics",
+      text: "CHIRON Robotics at the University of Central Florida",
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(window.location.href);
+        button.classList.add("copied");
+        window.setTimeout(() => button.classList.remove("copied"), 900);
+      }
+    } catch (error) {
+      if (error.name !== "AbortError") {
+        console.warn("Share failed", error);
+      }
+    }
+  });
+});
