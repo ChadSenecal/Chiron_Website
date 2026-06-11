@@ -89,6 +89,30 @@ if (hamburger && mobileMenu) {
   });
 }
 
+async function copyShareUrl(button, url) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(url);
+  } else {
+    const field = document.createElement("textarea");
+    field.value = url;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.opacity = "0";
+    document.body.appendChild(field);
+    field.select();
+    document.execCommand("copy");
+    document.body.removeChild(field);
+  }
+
+  const originalLabel = button.getAttribute("aria-label") || "Share CHIRON Robotics";
+  button.classList.add("copied");
+  button.setAttribute("aria-label", "Link copied");
+  window.setTimeout(() => {
+    button.classList.remove("copied");
+    button.setAttribute("aria-label", originalLabel);
+  }, 1000);
+}
+
 document.querySelectorAll(".footer-share").forEach((button) => {
   button.addEventListener("click", async () => {
     const shareData = {
@@ -98,15 +122,14 @@ document.querySelectorAll(".footer-share").forEach((button) => {
     };
 
     try {
-      if (navigator.share) {
+      if (navigator.share && window.location.protocol !== "file:") {
         await navigator.share(shareData);
-      } else if (navigator.clipboard) {
-        await navigator.clipboard.writeText(window.location.href);
-        button.classList.add("copied");
-        window.setTimeout(() => button.classList.remove("copied"), 900);
+      } else {
+        await copyShareUrl(button, shareData.url);
       }
     } catch (error) {
       if (error.name !== "AbortError") {
+        await copyShareUrl(button, shareData.url);
         console.warn("Share failed", error);
       }
     }
