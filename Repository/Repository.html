@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robot Repository | CHIRON Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Website_Resources/site.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 2C11 2 4 5.2 4 11.8C4 16.8 7.2 19.6 11 20C14.8 19.6 18 16.8 18 11.8C18 5.2 11 2 11 2Z" stroke="#d4af37" stroke-width="1.8" fill="none"/>
+          <path d="M11 6.5C11 6.5 7.8 8.5 7.8 12C7.8 14.6 9.2 16.2 11 16.8C12.8 16.2 14.2 14.6 14.2 12C14.2 8.5 11 6.5 11 6.5Z" fill="#d4af37"/>
+        </svg>
+      </div>
+      <span class="logo-text">CHIRON</span>
+    </a>
+
+    <div class="nav-center">
+      <a href="../Team/Chad.html">Team</a>
+      <a href="../Sponsors/Sponsors.html">Sponsors</a>
+      <a href="../Robot/Robot.html">Robot</a>
+      <a class="active" href="../Repository/Repository.html" aria-current="page">Robot Repository</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <button class="boink-btn" id="boinkBtn" aria-label="Sound button">
+        <img src="../Website_Resources/Centauroid_Logo.png" alt="">
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../Team/Chad.html">Team</a>
+    <a href="../Sponsors/Sponsors.html">Sponsors</a>
+    <a href="../Robot/Robot.html">Robot</a>
+    <a class="active" href="../Repository/Repository.html" aria-current="page">Robot Repository</a>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <div class="eyebrow">Robot Repository</div>
+        <h1>Every design file, document, and photo from the build.</h1>
+        <p class="lead">The archive of our class work on CHIRON: the final showcase, every milestone document from team contract to critical design review, KiCad projects for our custom sensor boards, the ESP32 firmware and Jetson control code, and photos of the build.</p>
+        <div class="repo-jump" role="navigation" aria-label="Repository sections">
+          <a href="#milestones">Milestone Documents <span class="repo-count" data-count-for="milestones" hidden></span></a>
+          <a href="#circuits">Circuit Boards <span class="repo-count" data-count-for="circuits" hidden></span></a>
+          <a href="#software">Software <span class="repo-count" data-count-for="software" hidden></span></a>
+          <a href="#gallery">Image Gallery <span class="repo-count" data-count-for="gallery" hidden></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ MILESTONE DOCUMENTS ═══════════════ -->
+    <section class="section repo-section" id="milestones">
+      <div class="section-header">
+        <h2>Milestone Documents</h2>
+        <p class="section-note">From the team contract to the final showcase: the reports and presentations that took CHIRON from first requirements to a reviewed design. PDFs open in a new tab, and every file can be downloaded.</p>
+      </div>
+
+      <!--
+        TO ADD A DOCUMENT: put the file in Repository/files/milestones/, then copy this block into the list below.
+        Keep the "View" button for PDFs only; browsers download Word and PowerPoint files instead of opening them.
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 1 · Month 2026</div>
+            <h3>Document title</h3>
+            <p>One or two sentences on what the document covers.</p>
+            <div class="repo-meta">PDF · 2.4 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/FileName.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/FileName.pdf" download>Download</a>
+          </div>
+        </article>
+      -->
+
+      <div class="repo-list">
+        <article class="repo-video" data-repo-item>
+          <iframe src="https://www.youtube-nocookie.com/embed/2kpLGBX13T4?rel=0" title="Project CHIRON showcase presentation (YouTube)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="repo-video-info">
+            <div class="repo-label">Final showcase</div>
+            <h3>Showcase Presentation</h3>
+            <p>Our final presentation of Project CHIRON, including the design documents behind the build.</p>
+            <div class="tag-row"><span class="tag tag-strong">Design documents inside</span></div>
+            <div class="repo-meta">Video on YouTube</div>
+            <div class="repo-actions">
+              <a class="button-link ghost repo-view" href="https://youtu.be/2kpLGBX13T4" target="_blank" rel="noopener">Watch on YouTube</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Project kickoff</div>
+            <h3>Team Contract</h3>
+            <p>Where CHIRON started: our mission for a wheeled centauroid that adapts to the workspace, team ground rules, how we work with stakeholders, and each member's role.</p>
+            <div class="repo-meta">PDF · 4 pages · 118 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/Team_Contract.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/Team_Contract.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 2 · June 2026</div>
+            <h3>System Requirements</h3>
+            <p>Turns stakeholder needs for urban emergency response and inspection into requirements: needs analysis and House of Quality, a technology assessment of benchmark robots, and mechanical, electrical, software, and compliance requirements, with the project Gantt chart.</p>
+            <div class="repo-meta">PDF · 60 pages · 1.1 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/ProjectCHIRON_Milestone_2.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/ProjectCHIRON_Milestone_2.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 3 · July 2026</div>
+            <h3>Concept Design Report</h3>
+            <p>The engineering baseline for CHIRON: concept of operations and mission scenarios, concept generation with trade studies and selection scoreboards for every subsystem, preliminary mechanical, electrical, and power-distribution analysis, and a full failure modes and effects analysis.</p>
+            <div class="repo-meta">PDF · 163 pages · 4.4 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/Chiron_Official_M3_Report.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/Chiron_Official_M3_Report.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 4 · September 2026</div>
+            <h3>Statement of Work</h3>
+            <p>This semester's targets (a 6-DOF arm lifting 5 kg, a camera, IR, and gas sensing block, self-balancing mobility, one hour of runtime, and a bill of materials under $11,000) with the technical approach and dated deliverables.</p>
+            <div class="repo-meta">PDF · 5 pages · 174 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/Milestone_4.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/Milestone_4.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="repo-row repo-highlight" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PDF</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 5 · October 2026</div>
+            <h3>Critical Design Review Report</h3>
+            <p>The written CDR: design definitions for mobility, manipulation, mechatronics, and power distribution with CAD, block diagrams, and wiring schematics, followed by engineering calculations, FMEA, prototyping strategy and test protocols, and the development, resource, and project plan.</p>
+            <div class="tag-row"><span class="tag tag-strong">Design documents inside</span></div>
+            <div class="repo-meta">PDF · 67 pages · 5.0 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/Project_CHIRON_M5_CDR.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/Project_CHIRON_M5_CDR.pdf" download>Download</a>
+          </div>
+        </article>
+
+        <article class="repo-row repo-highlight" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PPT</span>
+          <div class="repo-body">
+            <div class="repo-label">Milestone 5 · October 2026</div>
+            <h3>Critical Design Review Presentation</h3>
+            <p>Our CDR presentation: requirements, system architecture, CAD of the mobility and manipulation designs, torque, FEA, and LTspice analysis, power-distribution wiring diagrams, FMEA, the test plan, and prototype readiness, plus backup slides of engineering evidence.</p>
+            <div class="tag-row"><span class="tag tag-strong">Design documents inside</span></div>
+            <div class="repo-meta">44 slides · PDF 3.4 MB · PowerPoint original 17.4 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="files/milestones/Project_CHIRON_M5_CDR_Slides.pdf" target="_blank" rel="noopener">View</a>
+            <a class="button-link ghost repo-dl" href="files/milestones/Project_CHIRON_M5_CDR.pptx" download>Download .pptx</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CUSTOM CIRCUIT BOARDS (KiCad) ═══════════════ -->
+    <section class="section repo-section" id="circuits">
+      <div class="section-header">
+        <h2>Custom Circuit Boards</h2>
+        <p class="section-note">KiCad 10 projects for the boards we designed. Extract a download and open its .kicad_pro file in KiCad 10 or newer.</p>
+      </div>
+
+      <!--
+        TO ADD A BOARD: put the .zip in Repository/files/kicad/, then copy this block into the list below.
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Category</div>
+            <h3>Board name</h3>
+            <p>One or two sentences on what the board does.</p>
+            <div class="tag-row"><span class="tag">2-layer</span><span class="tag">W × H mm</span></div>
+            <div class="repo-meta">FileName.zip · 100 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/FileName.zip" download>Download .zip</a>
+          </div>
+        </article>
+      -->
+
+      <div class="repo-list cols-2">
+        <article class="repo-row repo-featured" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Main board</div>
+            <h3>Main ESP32-S3 Board</h3>
+            <p>The controller that ties the sensor boards together: an ESP32-S3-WROOM-1 (N16R8) with an FPC connector for the OV5640 camera, I²C to the thermal IR array, inputs for the MiCS-4514 gas sensor, and USB, UART, and SPI headers.</p>
+            <p class="repo-note">Open Camera_FINAL for the finished layout. The zip also includes the earlier Camera_PCB revision and older copies of the sensor boards; use the downloads below for their latest versions. Its firmware is under <a href="#software">Software</a>.</p>
+            <div class="tag-row"><span class="tag">ESP32-S3</span><span class="tag">2-layer</span><span class="tag">88.5 × 91.3 mm</span></div>
+            <div class="repo-meta">MainESP32Board.zip · 3.1 MB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/MainESP32Board.zip" download>Download .zip</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Camera</div>
+            <h3>OV5640 Camera FPC Adapter</h3>
+            <p>Carries the OV5640 camera module's through-hole headers to an 18-pin FPC connector, linking the camera to the main board over a flat cable.</p>
+            <div class="tag-row"><span class="tag">2-layer</span><span class="tag">23.5 × 20.5 mm</span></div>
+            <div class="repo-meta">OV5640_FPC_CON.zip · 21 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/OV5640_FPC_CON.zip" download>Download .zip</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Thermal sensing</div>
+            <h3>MLX90640 Thermal IR Array</h3>
+            <p>Breakout for the MLX90640 32 × 24 thermal infrared array, connected to the main board's I²C bus through a 4-pin FPC or header.</p>
+            <div class="tag-row"><span class="tag">2-layer</span><span class="tag">23.5 × 22.1 mm</span></div>
+            <div class="repo-meta">IR_ARRAY.zip · 187 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/IR_ARRAY.zip" download>Download .zip</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Gas sensing</div>
+            <h3>MiCS-4514 Gas Sensor</h3>
+            <p>Gas sensor board for the MiCS-4514, with separate reducing-gas and NOx outputs and a MOSFET-switched preheater, all on a 5-pin header.</p>
+            <div class="tag-row"><span class="tag">2-layer</span><span class="tag">17.5 × 30.3 mm</span></div>
+            <div class="repo-meta">MICS_4514.zip · 481 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/MICS_4514.zip" download>Download .zip</a>
+          </div>
+        </article>
+
+        <article class="repo-row" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">Power</div>
+            <h3>3.3 V Regulator Board</h3>
+            <p>Step-down supply built on the LM2576HV-3.3 switching regulator, with a screw-terminal input and an onboard fuse. Gerber files are included for fabrication.</p>
+            <div class="tag-row"><span class="tag">2-layer</span><span class="tag">91.3 × 40.6 mm</span><span class="tag">Gerbers included</span></div>
+            <div class="repo-meta">Regulator_PCB.zip · 115 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/kicad/Regulator_PCB.zip" download>Download .zip</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SOFTWARE ═══════════════ -->
+    <section class="section repo-section" id="software">
+      <div class="section-header">
+        <h2>Software</h2>
+        <p class="section-note">The firmware on the ESP32-S3 sensor board, and the Python program on the Jetson that runs the end effector. Select View to read the code in your browser.</p>
+      </div>
+
+      <div class="repo-list">
+        <article class="repo-row repo-featured" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">ZIP</span>
+          <div class="repo-body">
+            <div class="repo-label">ESP32-S3 · ESP-IDF 6.1</div>
+            <h3>Sensor Board Firmware</h3>
+            <p>Reads the MLX90640 thermal array twice a second, captures OV5640 camera frames and compresses them to JPEG, tracks the MiCS-4514 gas readings against a clean-air baseline, and serves all three on a live dashboard over the board's own Wi-Fi network. Each module cites the datasheet sections behind its settings.</p>
+            <dl class="repo-code-files">
+              <dt>main.c</dt><dd>Creates the shared sensor bus, starts each sensor, then the web server</dd>
+              <dt>irArray.h</dt><dd>MLX90640 thermal array (32 × 24 pixels) through Melexis' library</dd>
+              <dt>camera.h</dt><dd>OV5640 capture over the 8-bit DVP port, plus JPEG snapshots</dd>
+              <dt>mics4514.h</dt><dd>MiCS-4514 gas sensing: preheat, ADC readings, ppm estimates</dd>
+              <dt>webServer.h</dt><dd>Wi-Fi access point and the HTTP endpoints the dashboard polls</dd>
+              <dt>index.html</dt><dd>The live dashboard page, built into the firmware</dd>
+            </dl>
+            <p class="repo-note">Builds with ESP-IDF 6.1 (<code>idf.py build</code>), which fetches the camera and JPEG components the first time. Set <code>WEB_AP_PASSWORD</code> in <code>webServer.h</code> before flashing.</p>
+            <div class="tag-row"><span class="tag">C</span><span class="tag">FreeRTOS</span><span class="tag">ESP-IDF 6.1</span></div>
+            <div class="repo-meta">eceEmbedded.zip · 74 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-dl" href="files/firmware/eceEmbedded.zip" download>Download .zip</a>
+          </div>
+        </article>
+
+        <article class="repo-row repo-featured" data-repo-item>
+          <span class="repo-file-icon" aria-hidden="true">PY</span>
+          <div class="repo-body">
+            <div class="repo-label">NVIDIA Jetson · Python</div>
+            <h3>End Effector Control</h3>
+            <p>One Python program on the Jetson that serves the end effector's control page. It moves two moteus motors over CAN by angle (go to an angle, step, or hold to turn, one at a time or both together) and runs the Feetech ST gripper servo with adjustable speed and grip strength.</p>
+            <dl class="repo-code-files">
+              <dt>MoteusManager</dt><dd>Both moteus controllers on one CAN bus, commanded 50 times a second, with stall and fault handling</dd>
+              <dt>GripperController</dt><dd>The gripper servo in constant-speed mode, with grip-strength and temperature limits</dd>
+              <dt>make_handler</dt><dd>The web server: the page and its JSON API, answering only on the Jetson unless told otherwise</dd>
+              <dt>PAGE</dt><dd>The control page itself (HTML, CSS, and JavaScript), built into the script</dd>
+            </dl>
+            <p class="repo-note">Safety is built in: Stop all (or Space or Esc) halts everything, a jammed motor stops pushing on its own, moving parts stop if the page loses contact, and moves stay inside each motor's saved limits unless overridden.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">moteus · CAN-FD</span><span class="tag">Web control page</span></div>
+            <div class="repo-meta">masterCtrl.py · 2,705 lines · 129 KB</div>
+          </div>
+          <div class="repo-actions">
+            <a class="button-link repo-view" href="code/masterCtrl.html">View</a>
+            <a class="button-link ghost repo-dl" href="files/software/masterCtrl.py" download>Download .py</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════════ IMAGE GALLERY ═══════════════ -->
+    <section class="section repo-section" id="gallery">
+      <div class="section-header">
+        <h2>Image Gallery</h2>
+        <p class="section-note">Circuit development, from bare boards to live sensor data on the dashboard. Select any photo to see it full size.</p>
+      </div>
+
+      <!--
+        TO ADD A PHOTO: put the full-size image in Repository/files/images/ and a smaller copy in
+        Repository/files/images/thumbs/, then copy this block into the gallery below.
+
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/photo.jpg" data-lightbox>
+            <img src="files/images/thumbs/photo.jpg" alt="Describe what the photo shows" loading="lazy">
+          </a>
+          <figcaption>Short caption</figcaption>
+        </figure>
+      -->
+
+      <div class="repo-gallery">
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/sensor-stack-powered.jpg" data-lightbox>
+            <img src="files/images/thumbs/sensor-stack-powered.jpg" alt="Purple custom circuit boards powered on with blue status LEDs: the ESP32-S3 main board with the OV5640 camera on a ribbon cable, the regulator board, and the gas sensor board" loading="lazy" width="546" height="800">
+          </a>
+          <figcaption>The custom boards assembled and powered: the ESP32-S3 main board, OV5640 camera on its ribbon cable, 3.3 V regulator board, and MiCS-4514 gas sensor.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/boards-overview.jpg" data-lightbox>
+            <img src="files/images/thumbs/boards-overview.jpg" alt="Top-down view of the custom boards on an ESD mat, beside a red SparkFun MLX90640 breakout and a black ESP32 development board" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>All five custom boards on the bench, next to a SparkFun MLX90640 breakout and an ESP32 dev board.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/regulator-board.jpg" data-lightbox>
+            <img src="files/images/thumbs/regulator-board.jpg" alt="A hand holding the assembled regulator board, with the soldering station and the KiCad layout in the background" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>The assembled 3.3 V regulator board: LM2576HV switching regulator, 150 µH inductor, input fuse, and 36 V input connector.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/gas-sensor-board.jpg" data-lightbox>
+            <img src="files/images/thumbs/gas-sensor-board.jpg" alt="Close-up of the small assembled gas sensor board held between two fingers" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>The assembled MiCS-4514 gas sensor board, with the AO3400A MOSFET that switches its preheater.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/ir-array-board.jpg" data-lightbox>
+            <img src="files/images/thumbs/ir-array-board.jpg" alt="Close-up of the square IR array board held between two fingers" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>The IR array board, with the footprint for the MLX90640 thermal sensor and its 4-pin FPC connector.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/dashboard-thermal-phone.jpg" data-lightbox>
+            <img src="files/images/thumbs/dashboard-thermal-phone.jpg" alt="Phone screenshot of the board's dashboard at 192.168.4.1 showing a thermal image and temperature readouts" loading="lazy" width="369" height="800">
+          </a>
+          <figcaption>The board's live dashboard on a phone: a 32 × 24 thermal image from the MLX90640, with hottest, coldest, and center temperatures.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/dashboard-thermal-camera.jpg" data-lightbox>
+            <img src="files/images/thumbs/dashboard-thermal-camera.jpg" alt="Laptop screen showing the dashboard's thermal image above a camera snapshot of a raised hand" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>The dashboard's thermal image and OV5640 camera snapshot, with a hand held up to the sensors.</figcaption>
+        </figure>
+        <figure class="repo-shot" data-repo-item>
+          <a href="files/images/dashboard-gas.jpg" data-lightbox>
+            <img src="files/images/thumbs/dashboard-gas.jpg" alt="Laptop screen showing the dashboard's gas sensor table with voltages, resistances, and gas estimates" loading="lazy" width="600" height="800">
+          </a>
+          <figcaption>Live MiCS-4514 readings on the dashboard: sensing resistance against the clean-air baseline, and a ppm estimate for each gas.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div>
+        <h2>See What It's All For</h2>
+        <p>Read about CHIRON's mission, its wheel-leg mobility concept, and the hazard-detection work these boards support.</p>
+      </div>
+      <a class="button-link" href="../Robot/Robot.html">View robot page</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-title">CHIRON ROBOTICS</div>
+    <div class="footer-social" aria-label="Social links">
+      <button class="footer-icon footer-share" type="button" aria-label="Share CHIRON Robotics">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor"
+            d="M18 16.1c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11A2.98 2.98 0 0 0 18 7.9a3 3 0 1 0-3-3c0 .24.04.47.09.7L8.04 9.71A3 3 0 1 0 8.04 14.3l7.12 4.18c-.05.21-.08.43-.08.65a2.93 2.93 0 1 0 2.92-3.03Z" />
+        </svg>
+      </button>
+      <a class="footer-icon" href="https://www.instagram.com/chiron_sdcentauroid/" target="_blank" rel="noreferrer"
+        aria-label="CHIRON Robotics Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor"
+            d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-2.75a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" />
+        </svg>
+      </a>
+    </div>
+    <div class="footer-meta">
+      <a href="mailto:project.chiron.centauroid@gmail.com">project.chiron.centauroid@gmail.com</a>
+    </div>
+    <div class="footer-copy">&copy; CHIRON Robotics</div>
+  </footer>
+
+  <script src="../Website_Resources/site.js"></script>
+  <script src="../Website_Resources/repository.js"></script>
+</body>
+</html>
